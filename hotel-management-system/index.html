@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harbor Haven Hotel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <div class="brand-icon">H</div>
+          <span>Harbor Haven</span>
+        </div>
+
+        <nav class="menu">
+          <a href="#home">Home</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions" id="navActions">
+          <button class="btn btn-outline" id="loginBtn">Login</button>
+          <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+        </div>
+
+        <div class="nav-actions" id="userNav" style="display: none;">
+          <span id="userWelcome"></span>
+          <button class="btn btn-outline" id="logoutUserBtn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Modern hospitality management</p>
+            <h1>Smarter stays, smoother operations.</h1>
+            <p class="hero-text">
+              Book your perfect room, manage your reservations, and enjoy seamless hotel experiences.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" id="bookNowBtn">Reserve a room</button>
+              <button class="btn btn-secondary">Explore services</button>
+            </div>
+
+            <div class="stats">
+              <div>
+                <strong>120+</strong>
+                <span>Rooms</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>Guest rating</span>
+              </div>
+              <div>
+                <strong>98%</strong>
+                <span>Occupancy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-panel">
+            <div class="panel-header">
+              <h3>Book Your Stay</h3>
+              <span>Instant availability</span>
+            </div>
+
+            <form id="bookingForm">
+              <div class="field-row">
+                <label>
+                  Arrival
+                  <input type="date" id="arrivalDate" required />
+                </label>
+                <label>
+                  Departure
+                  <input type="date" id="departureDate" required />
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>
+                  Guests
+                  <select id="guestCount">
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                  </select>
+                </label>
+                <label>
+                  Room Type
+                  <select id="roomType">
+                    <option value="Standard">Standard</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Suite">Suite</option>
+                  </select>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary full-width">
+                Check Availability
+              </button>
+            </form>
+
+            <div class="booking-note">
+              Free cancellation up to 48 hours before check-in
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="highlights container">
+        <div class="highlight-card">
+          <span class="icon">🛏️</span>
+          <h4>Premium Rooms</h4>
+          <p>Comfort-first rooms with modern furniture and elegant interiors.</p>
+        </div>
+        <div class="highlight-card">
+          <span class="icon">🍽️</span>
+          <h4>Restaurant & Bar</h4>
+          <p>Chef-crafted meals and relaxing evening experiences for guests.</p>
+        </div>
+        <div class="highlight-card">
+          <span class="icon">💆</span>
+          <h4>Wellness</h4>
+          <p>Spa, fitness center, and wellness support for complete rest.</p>
+        </div>
+      </section>
+
+      <section id="rooms" class="rooms-section container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured accommodation</p>
+          <h2>Rooms & Suites</h2>
+        </div>
+
+        <div id="roomGrid" class="room-grid"></div>
+      </section>
+
+      <section class="services-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Hotel services</p>
+            <h2>Everything your guests need</h2>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏨</div>
+              <h4>Front Desk</h4>
+              <p>Fast registration, check-in/out, and guest support.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🧹</div>
+              <h4>Housekeeping</h4>
+              <p>Track room cleaning schedules and staff assignments.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💳</div>
+              <h4>Billing & Payment</h4>
+              <p>Manage invoices, deposits, and payment status easily.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">📊</div>
+              <h4>Reports</h4>
+              <p>Monitor revenue, occupancy trends, and operational activity.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand">
+            <div class="brand-icon">H</div>
+            <span>Harbor Haven</span>
+          </div>
+          <p>Luxury hotel operations, simplified for modern hospitality teams.</p>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>+1 (555) 820-4434</li>
+            <li>hello@harborhaven.com</li>
+            <li>24 Bayview Street, Miami</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
